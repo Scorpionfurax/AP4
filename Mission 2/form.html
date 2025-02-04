@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire BTS SIO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        form {
+            border: 2px solid green;
+            padding: 20px;
+            display: inline-block;
+            text-align: left;
+        }
+        .form-container {
+            margin-bottom: 10px;
+        }
+        hr {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="color: blue;">Services Informatiques aux Organisations</h2>
+<hr>
+<h3 style="color: blue;">Les formulaires</h3>
+<hr>
+
+<form action="mailto:kikouedmessi@gmail.com" method="POST" enctype="text/plain">
+    <label for="nom">Votre nom</label>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="prenom">Votre prénom</label>
+    <input type="text" id="prenom" name="prenom" required><br><br>
+
+    <fieldset>
+        <legend>Cochez les matières que vous aimez</legend>
+        <input type="checkbox" id="informatique" name="matiere" value="Informatique" checked>
+        <label for="informatique">Informatique</label><br>
+
+        <input type="checkbox" id="francais" name="matiere" value="Français">
+        <label for="francais">Français</label><br>
+
+        <input type="checkbox" id="maths" name="matiere" value="Mathématiques">
+        <label for="maths">Mathématiques</label><br>
+
+        <input type="checkbox" id="anglais" name="matiere" value="Anglais">
+        <label for="anglais">Anglais</label><br>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Quelle option avez-vous choisie ?</legend>
+        <input type="radio" id="slam" name="option" value="SLAM">
+        <label for="slam">SLAM</label><br>
+        <input type="radio" id="sisr" name="option" value="SISR" checked>
+        <label for="sisr">SISR</label><br>
+    </fieldset><br>
+
+    <label for="secondeLangue">Quelle est votre seconde langue ?</label>
+    <select id="secondeLangue" name="secondeLangue">
+        <option value="Espagnol">Espagnol</option>
+        <option value="Allemand">Allemand</option>
+        <option value="Anglais">Anglais</option>
+    </select><br><br>
+
+    <label for="commentaire">Vos observations</label><br>
+    <textarea id="commentaire" name="commentaire" rows="4" cols="50">Votre avis nous intéresse...</textarea><br><br>
+
+    <button type="submit">Envoyer</button>
+    <button type="reset">Annuler</button>
+</form>
+
+</body>
+</html>
