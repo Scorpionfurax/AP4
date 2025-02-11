@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Prestations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajouter une Prestation</h1>
+    <div class="container">
+        <label for="identifiant_prestation">Identifiant :</label>
+        <input type="text" id="identifiant_prestation" placeholder="Entrez l'identifiant">
+        <label for="nom_prestation">Nom :</label>
+        <input type="text" id="nom_prestation" placeholder="Entrez le nom de la prestation">
+        <label for="prix_prestation">Prix :</label>
+        <input type="text" id="prix_prestation" placeholder="Entrez le prix">
+        <button onclick="addPrestation()">Ajouter</button>
+    </div>
+    <a href="index.html">Retour à l'accueil</a>
+
+    <script>
+        function addPrestation() {
+            alert('Prestation ajoutée : ' + document.getElementById('identifiant_prestation').value + ' - ' + document.getElementById('nom_prestation').value + ', Prix : ' + document.getElementById('prix_prestation').value);
+        }
+    </script>
+</body>
+</html>

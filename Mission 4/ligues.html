@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Ligues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajouter une Ligue</h1>
+    <div class="container">
+        <label for="nom_ligue">Nom de la Ligue :</label>
+        <input type="text" id="nom_ligue" placeholder="Entrez le nom de la ligue">
+        <label for="sport">Sport :</label>
+        <input type="text" id="sport" placeholder="Entrez le sport associé">
+        <button onclick="addLigue()">Ajouter</button>
+    </div>
+    <a href="index.html">Retour à l'accueil</a>
+
+    <script>
+        function addLigue() {
+            alert('Ligue ajoutée : ' + document.getElementById('nom_ligue').value + ', Sport : ' + document.getElementById('sport').value);
+        }
+    </script>
+</body>
+</html>

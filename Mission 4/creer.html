@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une Facture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Créer une Facture</h1>
+    <div class="container">
+        <label for="ligue">Ligue :</label>
+        <input type="text" id="ligue" placeholder="Entrez la ligue">
+        <label for="destinataire">Destinataire :</label>
+        <input type="text" id="destinataire" placeholder="Entrez le destinataire">
+        <label for="date">Date :</label>
+        <input type="date" id="date">
+        <button onclick="createInvoice()">Créer</button>
+    </div>
+    <a href="index.html">Retour à l'accueil</a>
+
+    <script>
+        function createInvoice() {
+            alert('Facture créée pour : ' + document.getElementById('destinataire').value);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Gestion des Factures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .menu-item {
+            background: #2980b9;
+            color: white;
+            padding: 20px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        .menu-item:hover {
+            background-color: #1f618d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accueil</h1>
+    <div class="menu-container">
+        <a href="ligues.html" class="menu-item">Gestion des Ligues</a>
+        <a href="prestations.html" class="menu-item">Gestion des Prestations</a>
+        <a href="rechercher.html" class="menu-item">Rechercher une Facture</a>
+        <a href="creer.html" class="menu-item">Créer une Facture</a>
+    </div>
+</body>
+</html>
