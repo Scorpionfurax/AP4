@@ -3,13 +3,13 @@ DROP TABLE IF EXISTS prestation;
 DROP TABLE IF EXISTS facture;
 DROP TABLE IF EXISTS ligue_facture;
 
-CREATE TABLE PRESTATION (
+CREATE TABLE prestation (
     reference INT PRIMARY KEY AUTO_INCREMENT,
     libelle VARCHAR(255) NOT NULL,
     pu DECIMAL(10,2) NOT NULL
 )engine = innodb;
 
-CREATE TABLE FACTURE (
+CREATE TABLE facture (
     numero_facture INT PRIMARY KEY AUTO_INCREMENT,
     date_facture DATE NOT NULL,
     echeance DATE NOT NULL,
@@ -27,8 +27,10 @@ CREATE TABLE ligue_facture(
     FOREIGN KEY (reference) REFERENCES PRESTATION(reference) ON DELETE CASCADE ON UPDATE CASCADE
 )engine = innodb;
 
-CREATE TABLE prestation (
-    reference INT PRIMARY KEY AUTO_INCREMENT,
-    libelle VARCHAR(255) NOT NULL,
-    pu DECIMAL(10,2) NOT NULL
-)engine = innodb;
+ CREATE TABLE ligue (
+    code_client INT PRIMARY KEY,
+    intitule VARCHAR(255) NOT NULL,
+    tresorier VARCHAR(255) NOT NULL,
+    adresse VARCHAR(255) NOT NULL,
+    spe VARCHAR(255) NOT NULL
+) engine = innodb;
