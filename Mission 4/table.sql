@@ -16,3 +16,13 @@ CREATE TABLE FACTURE (
     code_ligue INT NOT NULL,
     FOREIGN KEY (code_ligue) REFERENCES LIGUE(code_client) ON DELETE CASCADE ON UPDATE CASCADE
 )engine = innodb;
+
+
+CREATE TABLE ligue_facture(
+    numero_facture INT NOT NULL,
+    reference INT NOT NULL,
+    quantite INT NOT NULL CHECK (quantite > 0),
+    PRIMARY KEY (numero_facture, reference),
+    FOREIGN KEY (numero_facture) REFERENCES FACTURE(numero_facture) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (reference) REFERENCES PRESTATION(reference) ON DELETE CASCADE ON UPDATE CASCADE
+)engine = innodb;
