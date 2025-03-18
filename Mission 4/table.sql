@@ -26,3 +26,9 @@ CREATE TABLE ligue_facture(
     FOREIGN KEY (numero_facture) REFERENCES FACTURE(numero_facture) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (reference) REFERENCES PRESTATION(reference) ON DELETE CASCADE ON UPDATE CASCADE
 )engine = innodb;
+
+CREATE TABLE prestation (
+    reference INT PRIMARY KEY AUTO_INCREMENT,
+    libelle VARCHAR(255) NOT NULL,
+    pu DECIMAL(10,2) NOT NULL
+)engine = innodb;
