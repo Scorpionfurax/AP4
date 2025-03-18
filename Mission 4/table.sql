@@ -15,4 +15,4 @@ CREATE TABLE FACTURE (
     echeance DATE NOT NULL,
     code_ligue INT NOT NULL,
     FOREIGN KEY (code_ligue) REFERENCES LIGUE(code_client) ON DELETE CASCADE ON UPDATE CASCADE
-))engine = innodb;
+)engine = innodb;
