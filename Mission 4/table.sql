@@ -36,3 +36,4 @@ CREATE TABLE ligue_facture (
     FOREIGN KEY (numero_facture) REFERENCES facture(numero_facture) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (reference) REFERENCES prestation(reference) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB;
+
